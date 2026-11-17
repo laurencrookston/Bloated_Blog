@@ -12,28 +12,10 @@ html {
 
 body {
   margin: 0;
-  font-family: "Comic Neue", cursive;
+  font-family: "Comic Sans", sans-serif;
   background:
-    radial-gradient(circle at 10% 20%, #fff700 0 4%, transparent 5%),
-    radial-gradient(circle at 80% 30%, #00ffff 0 5%, transparent 6%),
-    linear-gradient(135deg, #ff00cc, #00ff99 30%, #ffff00 55%, #7700ff 80%, #ff3300);
-  color: #111;
+  color: #ffffff;
   overflow-x: hidden;
-}
-
-/* Deliberately distracting scrolling banner */
-.ticker {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #000;
-  color: #39ff14;
-  padding: 15px;
-  font-family: "Bungee", sans-serif;
-  font-size: 1.2rem;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: tickerGlow 0.7s infinite alternate;
 }
 
 .hero {
@@ -54,7 +36,6 @@ body {
   border: 20px dotted #ff00ff;
   border-radius: 50%;
   transform: rotate(12deg);
-  animation: spin 18s linear infinite;
   z-index: -2;
 }
 
@@ -80,15 +61,10 @@ body {
   animation: wobble 3s ease-in-out infinite;
 }
 
-.tiny-warning {
-  font-family: "Roboto", sans-serif;
-  font-weight: 900;
-  letter-spacing: 5px;
-}
 
 h1 {
   margin: 0;
-  font-family: "Bungee", sans-serif;
+  font-family: "Comic Sans", sans-serif;
   font-size: clamp(4rem, 13vw, 10rem);
   line-height: 0.8;
   color: #ff006e;
@@ -100,35 +76,22 @@ h1 {
 }
 
 h1 span {
-  font-family: "Pacifico", cursive;
+  font-family:"Comic Sans", sans-serif;
   font-size: 2rem;
   vertical-align: top;
 }
 
 h2 {
-  font-family: "Pacifico", cursive;
+  font-family: "Comic Sans", sans-serif;
   font-size: clamp(2rem, 5vw, 4.5rem);
   text-shadow: 3px 3px white;
 }
 
 .hero-intro {
-  font-family: "Roboto", sans-serif;
+  font-family: "Comic Sans", sans-serif;
   font-size: 1.5rem;
 }
 
-.hero-video {
-  position: absolute;
-  width: 220px;
-  height: 220px;
-  right: 2%;
-  bottom: 2%;
-  object-fit: cover;
-  border: 12px solid #fff;
-  border-radius: 50%;
-  box-shadow: 0 0 50px #ff00ff;
-  animation: orbit 6s ease-in-out infinite;
-  z-index: 5;
-}
 
 .button-row {
   display: flex;
@@ -188,14 +151,9 @@ button:hover {
 .card-three { --rotation: -4deg; border-color: #00aa00; animation-delay: .4s; }
 .card-four { --rotation: 2deg; border-color: #7700ff; animation-delay: .6s; }
 
-.huge-emoji {
-  font-size: 6rem;
-  text-align: center;
-  animation: spin 4s linear infinite;
-}
 
 .card h3 {
-  font-family: "Bungee", sans-serif;
+  font-family: "Comic Sans", sans-serif;
   font-size: 1.7rem;
 }
 
@@ -250,13 +208,13 @@ button:hover {
 
 .stat span {
   display: block;
-  font-family: "Bungee", sans-serif;
+  font-family: "Comic Sans", sans-serif;
   font-size: 4rem;
   color: #39ff14;
 }
 
 .stat small {
-  font-family: "Roboto", sans-serif;
+  font-family: "Comic Sans", sans-serif;
 }
 
 .interactive-section {
@@ -291,7 +249,7 @@ button:hover {
 
 #message {
   padding: 20px;
-  font-family: "Pacifico", cursive;
+  font-family: "Comic Sans", sans-serif;
   font-size: 2rem;
   background: #ffff00;
 }
@@ -309,58 +267,12 @@ footer {
    Deliberately excessive animations; Which could be removed or reduced?
    ========================================================== */
 
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-@keyframes rainbow {
-  0% { filter: hue-rotate(0deg); }
-  100% { filter: hue-rotate(360deg); }
-}
-
-@keyframes wobble {
-  0%, 100% { transform: rotate(-1deg) scale(1); }
-  50% { transform: rotate(1deg) scale(1.02); }
-}
-
-@keyframes float {
-  from { transform: translateY(0) rotate(var(--rotation)); }
-  to { transform: translateY(-18px) rotate(calc(var(--rotation) * -1)); }
-}
-
-@keyframes orbit {
-  0% { transform: translate(0,0) rotate(0); }
-  50% { transform: translate(-80px,-50px) rotate(180deg); }
-  100% { transform: translate(0,0) rotate(360deg); }
-}
-
-@keyframes movingBackground {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-@keyframes pulse {
-  from { transform: scale(1); }
-  to { transform: scale(1.03); }
-}
-
-@keyframes tickerGlow {
-  from { box-shadow: 0 0 5px #39ff14; }
-  to { box-shadow: 0 0 35px #39ff14; }
-}
-
 /* A small concession to usability on smaller screens */
 @media (max-width: 900px) {
   .card-grid,
   .image-wall {
     grid-template-columns: 1fr 1fr;
-  }
 
-  .hero-video {
-    width: 130px;
-    height: 130px;
-  }
 }
 
 @media (max-width: 600px) {
